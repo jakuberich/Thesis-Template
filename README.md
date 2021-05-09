@@ -1,5 +1,15 @@
 # Thesis Template
 
+### Tempelka zawiera:
+
+- [X] Podział kodu na prostą czytelną strukturę.
+- [X] Możliwość edycji.
+- [X] Automatyczne sortowanie alfabetyczne skrótowców.
+- [X] Format drukowania dwustronnego.
+- [X] Podpis rozdziału na górze karzdej strony poza stroną otwierającą rozdział. 
+
+
+
 ### Community support for template creation:
 Jeżeli ktoś zauważy jakieś błędy/wpadnie na możliwe poprawki albo brakować będzie jakiejś funkcji - proszę o kontakt przez:
 - [X] [***sekcję dyskusji***](https://github.com/jakuberich/Thesis-Template/discussions)
