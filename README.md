@@ -1,9 +1,11 @@
 # Thesis Template
 
-## Prośba:
+### Community support for template creation:
 Jeżeli ktoś zauważy jakieś błędy/wpadnie na możliwe poprawki albo brakować będzie jakiejś funkcji - proszę o kontakt przez:
 - [X] [sekcję dyskusji](https://github.com/jakuberich/Thesis-Template/discussions)
 - [X] poprzez email: jakub.hajduga.97@gmail.com
+
+### Supporting the creator
 
 W podzięce zawsze możecie kupić mi kawę:
 
