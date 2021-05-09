@@ -1,0 +1,14 @@
+\makeatletter
+
+\appendix
+
+% -------------- Osobna numeracja niezależna od rozdziałów
+
+\let\stdchapter\chapter
+\renewcommand*\chapter{%
+  \@ifstar{\starchapter}{\@dblarg\nostarchapter}}
+\newcommand*\starchapter[1]{\stdchapter*{#1}}
+\def\nostarchapter[#1]#2{\stdchapter[{#1}]{#2}}
+\makeatother
+
+\input{Appendix/Software}

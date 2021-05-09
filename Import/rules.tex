@@ -1,0 +1,96 @@
+\usepackage{graphicx}
+\usepackage{polski}
+\usepackage[english,polish]{babel}
+\usepackage[top=3.0cm, bottom=2.5cm, left=2.5cm, right=2.5cm, bindingoffset=0cm, footskip=1.5cm]{geometry}
+\usepackage{setspace}
+\usepackage{multirow}
+\usepackage[unicode=true]{hyperref}
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{lineno}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{mwe}
+\usepackage{datatool}
+\usepackage{fontspec}
+\usepackage{indentfirst}
+\usepackage[final]{pdfpages}
+
+
+\input{Import/listings}
+
+\makeatletter
+    \def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                             \refstepcounter{chapter}%
+                             \typeout{\@chapapp\space\thechapter.}%
+                             \addcontentsline{toc}{chapter}%
+                                       {\protect\numberline{\thechapter.}#1}%
+                        \else
+                          \addcontentsline{toc}{chapter}{#1}%
+                        \fi
+                        \chaptermark{#1}%
+                        \addtocontents{toc}{\protect\addvspace{15\p@}}% NEW
+                        \addtocontents{lof}{\protect\addvspace{10\p@}}%
+                        \addtocontents{lot}{\protect\addvspace{10\p@}}%
+                        \if@twocolumn
+                          \@topnewpage[\@makechapterhead{#2}]%
+                        \else
+                          \@makechapterhead{#2}%
+                          \@afterheading
+                        \fi}
+    \makeatother
+
+
+\pagestyle{fancy}
+\fancyhead{
+\rhead{\leftmark}}
+
+\DeclareCaptionFont{smallcap}{\footnotesize}
+
+\captionsetup[figure]{font=smallcap}
+\captionsetup[table]{font=smallcap}
+
+% Sortowanie w porządku alfabetycznym
+
+\newcommand{\sortitem}[2][\relax]{
+  \DTLnewrow{list}
+  \ifx#1\relax
+    \DTLnewdbentry{list}{sortlabel}{#2}
+  \else
+    \DTLnewdbentry{list}{sortlabel}{#1}
+  \fi%
+  \DTLnewdbentry{list}{description}{#2}
+}
+\newenvironment{sortedlist}{%
+  \DTLifdbexists{list}{\DTLcleardb{list}}{\DTLnewdb{list}}
+}{%
+  \DTLsort{sortlabel}{list}
+  \begin{itemize}
+    \DTLforeach*{list}{\theDesc=description}{
+      \item[] \theDesc}
+  \end{itemize}
+}
+
+\newcommand{\acr}[1]{\makebox[.20\textwidth][l]{\textbf{#1}}}
+\newcommand{\acronim}[1]{\parbox[t]{.07\textwidth}{ — }\parbox[t]{.7\textwidth}{#1}}
+
+\setmainfont[
+  Path           = ./Fonts/ ,
+  Extension      = .ttf ,
+  UprightFont    = *-Reg ,
+  BoldFont       = *-Bo ,
+  ItalicFont     = *-It ,
+  BoldItalicFont = *-BI
+]{Bookerly}
+
+\setsansfont[
+  Path           = ./Fonts/ ,
+  Extension      = .ttf ,
+  UprightFont    = *-Reg ,
+  BoldFont       = *-Bo ,
+  ItalicFont     = *-It ,
+  BoldItalicFont = *-BI
+]{Bookerly}
