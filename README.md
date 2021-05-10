@@ -6,7 +6,7 @@
 - [X] Możliwość edycji.
 - [X] Automatyczne sortowanie alfabetyczne skrótowców.
 - [X] Format drukowania dwustronnego.
-- [X] Podpis rozdziału na górze karzdej strony poza stroną otwierającą rozdział. 
+- [X] Podpis rozdziału na górze każdej strony poza stroną otwierającą rozdział. 
 
 
 
