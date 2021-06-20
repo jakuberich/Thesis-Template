@@ -1,5 +1,8 @@
 # Thesis Template
 
+### Wymagania:
+- [X] Kompilator xselatex lub lulatex
+
 ### Tempelka zawiera:
 
 - [X] Podział kodu na prostą czytelną strukturę.
